@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Melll</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .date-info {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Sign In</h2>
+        <form id="signin-form">
+            <!-- Password as Date Input, user must manually select date -->
+            <input type="date" id="password-date" name="password" required>
+            
+            <input type="submit" value="Sign In">
+        </form>
+
+        <div class="date-info">
+            Ultah nya melvi
+        </div>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script>
+        document.getElementById('signin-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get the entered date
+            const passwordDate = document.getElementById('password-date').value;
+            const correctDate = '2008-08-07';
+
+            // Check if the entered date matches August 7, 2008
+            if (passwordDate === correctDate) {
+                window.location.href = 'melvi.html'; // Redirect if correct
+            } else {
+                // Show an error message if the date is incorrect
+                document.getElementById('error-message').textContent = 'Incorrect date. Please set the password to August 7, 2008.';
+            }
+        });
+    </script>
+
+</body>
+</html>
