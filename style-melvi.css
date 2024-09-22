@@ -1,0 +1,32 @@
+@font-face {
+    font-family: poppins;
+    src: url(poppins.ttf);
+    font-style:normal
+}
+
+* {
+    font-family: poppins;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
