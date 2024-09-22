@@ -1,14 +1,13 @@
 const noBtn = document.getElementById("no-btn");
-    const container = document.querySelector(".container");
 
     noBtn.addEventListener("click", function () {
-        // Get container dimensions
-        const containerWidth = container.clientWidth;
-        const containerHeight = container.clientHeight;
+        // Get the viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
 
-        // Randomize new position
-        const randomX = Math.floor(Math.random() * (containerWidth - noBtn.offsetWidth));
-        const randomY = Math.floor(Math.random() * (containerHeight - noBtn.offsetHeight));
+        // Randomize new position within the viewport
+        const randomX = Math.floor(Math.random() * (viewportWidth - noBtn.offsetWidth));
+        const randomY = Math.floor(Math.random() * (viewportHeight - noBtn.offsetHeight));
 
         // Set new position for the "No" button
         noBtn.style.position = "absolute";
