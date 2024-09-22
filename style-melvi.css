@@ -9,6 +9,8 @@
     overflow: hidden;
 }
 
+h1 {text-align: center;}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -29,4 +31,16 @@ button {
     font-size: 20px;
     margin-left: 70px;
     margin-right: 70px;
+}
+
+@media screen and (max-width:426px){
+    h1 {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
 }
