@@ -33,6 +33,11 @@ button {
     margin-right: 70px;
 }
 
+.gif {
+    width: 300px;
+    height: 300px;
+}
+
 @media screen and (max-width:426px){
     h1 {
         font-size: 25px;
